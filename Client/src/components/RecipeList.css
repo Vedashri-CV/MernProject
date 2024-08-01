@@ -1,0 +1,13 @@
+/* import React from 'react';
+import '../index.css';
+
+const Card = ({ recipe }) => {
+    return (
+        <div className="card">
+            <img src={recipe.image} alt={recipe.name} />
+            <h3>{recipe.name}</h3>
+        </div>
+    );
+};
+
+export default Card; */
