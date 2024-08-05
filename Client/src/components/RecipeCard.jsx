@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import "./RecipeCard.css";
+
 
 function RecipeCard({ recipe }) {
   const [showPopup, setShowPopup] = useState(false);
-  // const [classna, setClassna] = useState("reciepe-card1");
-  let classna = "";
 
   const togglePopup = () => {
     setShowPopup(!showPopup);
