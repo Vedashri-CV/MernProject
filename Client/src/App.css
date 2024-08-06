@@ -1,6 +1,6 @@
-.App {
+ .App {
   text-align: center;
-}
+} 
 
 .header-content {
   display: flex;
@@ -70,13 +70,13 @@
   padding: 5px;
 }
 
-.categories {
+.categoriess {
   display: flex;
   margin-top: 10px;
   margin-left: 300px;
 }
 
-.categories button {
+.categoriess button {
   margin: 0 10px;
   padding: 5px 10px;
   background-color: #4e342e;
@@ -88,13 +88,13 @@
  
 }
 
-.categories button:hover {
+.categoriess button:hover {
   background-color: #ffffff;
   color:#4e342e;
 }
 
 .image-slideshow {
-  width: 300px; /* Adjust as needed */
+  width: 300px; 
   margin-right: 200px;
   margin-top:70px;
 }

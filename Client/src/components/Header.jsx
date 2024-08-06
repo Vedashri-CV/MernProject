@@ -28,10 +28,11 @@ function Header({ setSearchTerm, setCategory }) {
         <div className="logo">Recipe App</div>
         <div className="nav-links">
           <a href="#">Home</a>
-          <a href="#">Recipe</a>
-          <a href="#">MyDiet</a>
-          <a href="#">Blog</a>
-          <a href="#">SignUp</a>
+          <a href="Plan">Plan</a>
+          <a href="Diet">MyDiet</a>
+          <a href="Blog">Blog</a>
+        
+          <a href="Sign">SignUp</a>
         </div>
       </nav>
       <div className="header-content">
@@ -45,7 +46,7 @@ function Header({ setSearchTerm, setCategory }) {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <div className="categories">
+          <div className="categoriess">
             {categories.map((cat) => (
               <button key={cat} onClick={() => setCategory(cat)}>
                 {cat}

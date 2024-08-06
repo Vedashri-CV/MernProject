@@ -1,0 +1,121 @@
+ * {
+  font-family: "PT Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+   
+   
+ }
+
+
+
+
+
+
+
+.heroo {
+    background-color:#333;
+    padding: 50px 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.heroo-content {
+    position: relative;
+    z-index: 2;
+}
+
+.heroo h1 {
+    font-size: 48px;
+    color:#f3e9e9;       
+    margin: 0;
+}
+
+.heroo p {
+    font-size: 18px;
+    color: #f3e9e9;
+    margin: 10px 0 0 0;
+}
+
+
+
+
+
+.subscription-plans {
+    padding: 4rem 0;
+    text-align:center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.subscription-plans h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.subscription-plans .plans {
+   
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.subscription-plans .plan {
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.subscription-plans .plan:hover {
+    transform: scale(1.05);
+
+}
+
+.subscription-plans .plan h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.subscription-plans .plan .price {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin: 10px 0;
+}
+
+.subscription-plans .plan ul {
+    list-style: disc inside;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-left: 30px;
+}
+
+.subscription-plans .plan ul li {
+    margin-bottom: 0.5rem;
+    content: '✔';
+}
+
+.subscription-plans .plan .cta-btn {
+    background: #051d3d;
+   
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscription-plans .plan .cta-btn:hover {
+    background-color: #0056b3;
+}
+
+

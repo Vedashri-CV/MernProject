@@ -1,0 +1,224 @@
+
+  .body{
+    margin:0;
+    padding:0;
+
+  }
+  
+  
+  .number{
+
+
+
+    margin-left:10px;  
+  }
+  .mea
+  {
+    margin-left: 10px;
+  }
+  .Appp {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    
+  }
+  
+  h1 {
+    
+    font-size: 2.5em;
+    text-align: center;
+    
+  }
+  
+  p {
+    text-align: center;
+    color:white;
+  }
+  
+  .diet-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    
+  
+  }
+  
+  .diet-selector button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #c79797;
+    color:white;
+  }
+  
+  .diet-selector button:hover {
+    background-color:WHITE;
+    color: black
+  }
+  
+  .diet-selector .selected {
+    background-color: #c79797 ;
+    color: white;
+  }
+  
+  .calorie-input {
+    margin-top: 20px;
+    text-align: center;
+    color:  WHITE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+  }
+  
+  .calorie-input label {
+   
+    margin: 10px 0;
+    
+  }
+  
+  .calorie-input input,
+  .calorie-input select {
+    width: 100px;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .generate-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #c79797;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .generate-button:hover {
+    background-color: WHITE;
+    color: black;
+  }
+  
+  .meal-plan {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .meal-plan h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    
+  }
+  
+  .meal-plan ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .meal-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    border-bottom: 1px solid #000000;
+    padding: 10px 0;
+    position: relative;
+  
+  }
+  
+  .meal-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLRcptbWtktpIFmJ9YLfSs2O366T7XmcTBdA&s");
+   object-fit: cover;
+   background-position: center;
+    
+  }
+  
+  .meal-details {
+    max-width: 600px;
+    text-align: left;
+    align-self: flex-end; 
+  
+  }
+  
+  .meal-details h3 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .meal-details p {
+    margin: 5px 0;
+  }
+  
+  .reci-button {
+    padding: 8px 12px;
+    margin-top: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color:  #c79797;
+    color: #3e2723;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reci-button:hover {
+    background-color: #c79797;
+    color:white;
+  }
+  
+  .modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .modal p {
+    font-size: 1.2em;
+    color: #ffffff;
+  }

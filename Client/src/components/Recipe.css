@@ -1,0 +1,119 @@
+.body {
+    font-family:  Arial, sans-serif;
+   
+    margin: 0;
+    padding: 0;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background-image: url("https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=600"); */
+  background-size: cover;
+  }
+  
+  h1, .h2, .h3, .h4 {
+    color: white;
+    margin: 10px 0;
+  }
+  
+  .Appp {
+    
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #4e342e;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    
+   
+  }
+  
+  .header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d7ccc8;
+    
+  }
+  
+ .header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+  }
+  
+  .section {
+    margin: 20px 0;
+  }
+  
+  .ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .li {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: rgb(244, 220, 220);
+    border: 1px solid #d7ccc8;
+    border-radius: 4px;
+  }
+  
+  .recipe-card {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #8d6e63;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .recipe-card h3 {
+    margin: 0;
+    color: #4e342e;
+  }
+  
+  .recipe-card h4 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color:#6d4c41;
+  }
+  
+  .recipe-card p {
+    margin: 10px 0 0 0;
+    color: #4e342e
+  }
+  
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  .filter-container select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #8d6e63;
+    border-radius: 4px;
+  }
+  
+  .button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #4e342e;
+    background-color:white;
+    border: 1px solid #8d6e63;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #d7ccc8;
+  }
+  
+  
