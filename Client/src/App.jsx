@@ -12,6 +12,8 @@ import SignInSide from "./components/SignInSlide";
 import SignUp from "./components/SignUp";
 import Plan from "./Plan";
 import Nonveg from "./Nonveg";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
   
      <div>
       <Router>
+        <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           <Route path="/Blog" element={<Blog/>}></Route>
@@ -31,6 +34,7 @@ function App() {
          <Route path="/signup" element={<SignUp/>}></Route>
          <Route path="/Nonveg" element={<Nonveg/>}></Route>
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

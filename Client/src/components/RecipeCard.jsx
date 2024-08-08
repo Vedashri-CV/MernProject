@@ -17,7 +17,8 @@ function RecipeCard({ recipe }) {
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
-            <span className="close" onClick={togglePopup}>
+            <span className="close"
+            style={{color:"wheat"}} onClick={togglePopup}>
               &times;
             </span>
             <h3>{recipe.name}</h3>

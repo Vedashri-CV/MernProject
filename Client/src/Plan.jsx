@@ -35,9 +35,12 @@ const Plan = () => {
                         <li>CB cloud sync</li>
                         <li>Use on ios,Android & web</li>
                     </ul>
-                    <Button variant="contained" color="success">
+                    <div className='button1'>
+
+                    <button className='button-plan'>
         choose Free
-      </Button>
+      </button>
+                    </div>
                 </div>
                 <div class="plan basic">
                     <h3>Basic Plan</h3>
@@ -49,9 +52,12 @@ const Plan = () => {
                         <li>CB cloud sync</li>
                         <li>Use on ios,Android & web</li>
                     </ul>
-                    <Button variant="contained" color="success">
+                    <div className='button2'>
+
+                    <button className='button-plan1' >
         choose Basic
-      </Button>
+      </button>
+                    </div>
                 </div>
                 <div class="plan standard">
                     <h3>Monthly Plan</h3>
@@ -65,9 +71,12 @@ const Plan = () => {
                         <li>Use on ios,Android & web</li>
                         <li>cancel any time</li>
                     </ul>
-                    <Button variant="contained" color="success">
+                    <div className='button3'>
+
+                    <button className='button-plan2'>
         choose Monthly
-      </Button>
+      </button>
+                    </div>
                 </div>
                 <div class="plan premium">
                     <h3>Yearly Plan</h3>
@@ -82,9 +91,9 @@ const Plan = () => {
                         <li>Use on ios,Android & web</li>
                         <li>cancel any time</li>
                     </ul>
-                    <Button variant="contained" color="success">
+                    <button className='button-plan3'>
         choose yearly
-      </Button>
+      </button>
                 </div>
             </div>
         

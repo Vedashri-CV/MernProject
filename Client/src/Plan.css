@@ -2,19 +2,10 @@
   font-family: "PT Sans", sans-serif;
     margin: 0;
     padding: 0;
-   
-   
  }
-
-
-
-
-
-
-
 .heroo {
-    background-color:#333;
-    padding: 50px 20px;
+    background-color:#ff5100;
+    padding: 100px 20px;
     border-radius: 10px;
     text-align: center;
     position: relative;
@@ -23,24 +14,20 @@
 .heroo-content {
     position: relative;
     z-index: 2;
+   
 }
 
 .heroo h1 {
     font-size: 48px;
-    color:#f3e9e9;       
+    color:#ffffff;       
     margin: 0;
 }
 
 .heroo p {
     font-size: 18px;
-    color: #f3e9e9;
+    color: #ffffff;
     margin: 10px 0 0 0;
 }
-
-
-
-
-
 .subscription-plans {
     padding: 4rem 0;
     text-align:center;
@@ -86,7 +73,10 @@
 
 .subscription-plans .plan .price {
     font-size: 1.5em;
-    color: #007BFF;
+    background: linear-gradient(to right,#ff5100,#67db6d);
+    -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      font-size:30px;
     margin: 10px 0;
 }
 
@@ -103,7 +93,7 @@
     content: '✔';
 }
 
-.subscription-plans .plan .cta-btn {
+/* .subscription-plans .plan .cta-btn {
     background: #051d3d;
    
     color: white;
@@ -112,10 +102,55 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+} */
+
+
+.button-plan
+{
+    background-color: #67db6d;
+}
+.button-plan1
+{
+    background-color: #67db6d;
+}
+.button-plan2
+{
+    background-color: #67db6d;
+}
+.button-plan3
+{
+    background-color: #67db6d;
+}
+.button-plan:hover
+{
+     transform: scale(1.1);
+     background-color: #67db6d;
+    }
+    .button-plan1:hover
+    {
+    transform: scale(1.1);
+    background-color: #67db6d;
+}
+.button-plan2:hover
+{
+    transform: scale(1.1);
+    background-color: #67db6d;
+}
+.button-plan3:hover
+{
+    transform: scale(1.1);
+    background-color: #67db6d;
 }
 
-.subscription-plans .plan .cta-btn:hover {
-    background-color: #0056b3;
+.button1{
+     padding-top: 80px;
+     
+    }
+    .button2{
+        
+        padding-top: 80px;
 }
+.button3{
+    padding-top: 30px;
 
-
+}

@@ -100,9 +100,21 @@ const Diet = () => {
     setSelectedRecipe(null);
   };
   return (
-    <div className="Appp">
-      <h1>PUT YOUR DIET ON AUTOPILOT</h1>
-      <p>Ready to give it a shot? Let us know your diet.</p>
+    <div >
+      <main>
+        <section class="heroo">
+            <div class="heroo-content">
+            <h1>PUT YOUR DIET ON AUTOPILOT</h1>
+            <p>Ready to give it a shot? Let us know your diet.</p>
+            </div>
+            <div class="heroo-images">
+               
+
+           
+            </div>
+        </section>
+    </main>
+      
       
       <div className="diet-selector">
         {dietOptions.map((diet) => (
@@ -115,19 +127,21 @@ const Diet = () => {
           </button>
         ))}
       </div>
+     <div className='sugan'>
+
       <div className="calorie-input">
-        <label>
+        <label className='label-diet'>
          I want to eat 
 
           <input
           className='number'
-            type="number"
-            placeholder="...."
-            value={calories}
-            onChange={handleCalorieChange}
+          type="number"
+          placeholder="...."
+          value={calories}
+          onChange={handleCalorieChange}
           />
         </label>
-        <label>
+        <label className='label-diet'>
           Calories in 
           <select value={mealsPerDay} onChange={handleMealsPerDayChange} className='me'>
             {[1, 2, 3, 4, 5, 6].map((num) => (
@@ -138,12 +152,15 @@ const Diet = () => {
           </select>
         </label>
       </div>
+     
+
       <button onClick={generateMealPlan} className="generate-button">
         Generate
       </button>
+     
       {mealPlan.length > 0 && (
         <div className="meal-plan">
-          <h2> Your Meal Plan </h2>
+          <h2 className='meal-plan-h1'> Your Meal Plan </h2>
           <ul>
             {mealPlan.map((meal, index) => (
               <li key={index} className="meal-item">
@@ -170,7 +187,9 @@ const Diet = () => {
           </div>
         </div>
       )}
-    </div>
+      </div>
+      </div>
+
 
   )
 }

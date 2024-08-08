@@ -5,19 +5,6 @@
     background-color: #f4f4f9;
 }
 
-
-/* 
-header {
-    background-color: #333;
-    color: #fff;
-     padding: 10px 0; 
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
 .search-box{
     display:flex;
     align-items: center;
@@ -47,10 +34,10 @@ header .container {
     cursor: pointer;
 }
 .hero {
-    background-color: #333;
+    background-color:#ff5100;
     color: #fff;
     text-align: center;
-    padding: 50px 20px;
+    padding: 85px 20px;
 }
 
 .hero h1 {
@@ -71,7 +58,7 @@ header .container {
 
 .category-btn {
     background-color: #efecec;
-    color: #333;
+    color: #000000;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -81,7 +68,7 @@ header .container {
 }
 
 .category-btn.active {
-    background-color: #155670;
+    background-color: #67db6d;
     color: #fff;
 }
 

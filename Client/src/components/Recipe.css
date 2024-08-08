@@ -1,4 +1,4 @@
-.body {
+/* .body {
     font-family:  Arial, sans-serif;
    
     margin: 0;
@@ -8,9 +8,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background-image: url("https://images.pexels.com/photos/129731/pexels-photo-129731.jpeg?auto=compress&cs=tinysrgb&w=600"); */
-  background-size: cover;
-  }
+  
+}
   
   h1, .h2, .h3, .h4 {
     color: white;
@@ -117,3 +116,4 @@
   }
   
   
+   */

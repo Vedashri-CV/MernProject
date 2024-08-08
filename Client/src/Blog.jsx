@@ -1,4 +1,4 @@
-// Blog.js
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Blog.css';
@@ -11,7 +11,6 @@ import SesameButterNoodles from './assets/images/Sesame-Butter-Noodles.jpg';
 import ChickenSalad from './assets/images/Chicken-Salad.jpg';
 import HoneyChipotleChickenSkewers from './assets/images/Honey-Chipotle-Chicken-Skewers.jpg';
 import uttand from './assets/images/UU.jpg';
-// import su from './assets/images'
 import chec from './assets/images/chechicken.jpg';
 import searchicon from './assets/images/searchicon.jpg';
 import author from './assets/images/author.jpeg'

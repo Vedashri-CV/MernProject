@@ -1,9 +1,5 @@
 
-  .body{
-    margin:0;
-    padding:0;
 
-  }
   
   
   .number{
@@ -17,7 +13,7 @@
     margin-left: 10px;
   }
   .Appp {
-    padding: 20px;
+    padding: 100px;
     max-width: 800px;
     margin: 0 auto;
     
@@ -29,10 +25,13 @@
     text-align: center;
     
   }
-  
+  .label-diet
+  {
+    color: #000000;
+  }
   p {
     text-align: center;
-    color:white;
+    color:rgb(0, 0, 0);
   }
   
   .diet-selector {
@@ -41,6 +40,7 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
+ 
     
   
   }
@@ -52,18 +52,18 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background-color: #c79797;
-    color:white;
+    background-color: #efecec;
+    color:rgb(9, 8, 8);
   }
   
   .diet-selector button:hover {
-    background-color:WHITE;
+    background-color: #efecec;
     color: black
   }
   
   .diet-selector .selected {
-    background-color: #c79797 ;
-    color: white;
+    background-color:#67db6d ;
+    color: rgb(255, 255, 255);
   }
   
   .calorie-input {
@@ -74,7 +74,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    
+   
   }
   
   .calorie-input label {
@@ -97,7 +97,7 @@
     padding: 10px 20px;
     font-size: 1em;
     color: white;
-    background-color: #c79797;
+    background-color:#67db6d;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -107,13 +107,14 @@
   }
   
   .generate-button:hover {
-    background-color: WHITE;
-    color: black;
+    transform: scale(1.1);
+    background-color:#67db6d;
   }
   
   .meal-plan {
     text-align: center;
     margin-top: 30px;
+  
   }
   
   .meal-plan h2 {
@@ -137,7 +138,10 @@
     position: relative;
   
   }
-  
+  .sugan
+  {
+    background-color: #efecec;
+  }
   .meal-image {
     width: 200px;
     height: 200px;
@@ -148,6 +152,7 @@
    background-position: center;
     
   }
+  
   
   .meal-details {
     max-width: 600px;
@@ -171,15 +176,17 @@
     font-size: 1em;
     border: none;
     border-radius: 5px;
-    background-color:  #c79797;
-    color: #3e2723;
+     background-color:#67db6d;;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .reci-button:hover {
-    background-color: #c79797;
-    color:white;
+    transform: scale(1.1);
+    background-color:#67db6d;
+
+    color:white
   }
   
   .modal {
