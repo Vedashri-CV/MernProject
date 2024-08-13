@@ -1,37 +1,8 @@
-import * as React from "react";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useState } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Footer from "./Footer"; 
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      <Link color="inherit" href="https://mui.com/">
-        WANDERLUST website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
-const defaultTheme = createTheme();
 
 export default function SignUp() {
   const [firstName, setFirstName] = useState("");
@@ -76,222 +47,229 @@ export default function SignUp() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
-      <Box
-        sx={{
-          backgroundImage:
-            "url(https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_750976_16867326232454816.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "100vh",
-          minWidth: "100vw",
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Container component="main" maxWidth="xs">
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+    <>
+      {/* Your SignUp component JSX */}
+      <ThemeProvider theme={defaultTheme}>
+        <CssBaseline />
+        <Box
+          sx={{
+            backgroundImage: "url(https://d2jx2rerrg6sh3.cloudfront.net/images/news/ImageForNews_750976_16867326232454816.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            minHeight: "100vh",
+            minWidth: "100vw",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Container component="main" maxWidth="xs">
             <Box
-              component="form"
-              noValidate
-              onSubmit={handleSubmit}
               sx={{
-                backgroundColor: "rgba(255, 255, 255, 0.4)", // White opaque background
-                borderRadius: 2, // Rounded corners
-                padding: 4,
-                width: "100%",
-                justifyContent: "center",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
             >
-              {formError && (
-                <Typography color="error" variant="body2" align="center">
-                  {formError}
-                </Typography>
-              )}
-              <Grid container spacing={3}>
-                <Grid item xs={1} sm={6}>
-                  <TextField
-                    autoComplete="given-name"
-                    name="firstName"
-                    required
-                    fullWidth
-                    id="firstName"
-                    label="First Name"
-                    autoFocus
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    InputLabelProps={{ shrink: true }}
-                    sx={{
-                      backgroundColor: "rgba(128, 128, 128, 0.5)", // Gray opaque background
-                      borderRadius: 1,
-                      "& .MuiInputBase-input": {
-                        fontSize: "1.1rem",
-                        color: "black",
-                      },
-                      "& .MuiFormLabel-root": {
-                        color: "black",
-                        fontWeight: "bold",
-                        fontSize: "1.2rem",
-                      },
-                      "& .MuiFormHelperText-root": {
-                        color: "red",
-                      },
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    required
-                    fullWidth
-                    id="lastName"
-                    label="Last Name"
-                    name="lastName"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
-                    InputLabelProps={{ shrink: true }}
-                    sx={{
-                      backgroundColor: "rgba(128, 128, 128, 0.5)",
-                      borderRadius: 1,
-                      "& .MuiInputBase-input": {
-                        fontSize: "1.1rem",
-                        color: "black",
-                      },
-                      "& .MuiFormLabel-root": {
-                        color: "black",
-                        fontWeight: "bold",
-                        fontSize: "1.2rem",
-                      },
-                      "& .MuiFormHelperText-root": {
-                        color: "red",
-                      },
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    required
-                    fullWidth
-                    id="email"
-                    label="Email Address"
-                    name="email"
-                    autoComplete="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    error={!!emailError}
-                    helperText={emailError}
-                    InputLabelProps={{ shrink: true }}
-                    sx={{
-                      backgroundColor: "rgba(128, 128, 128, 0.5)",
-                      borderRadius: 1,
-                      "& .MuiInputBase-input": {
-                        fontSize: "1.1rem",
-                        color: "black",
-                      },
-                      "& .MuiFormLabel-root": {
-                        color: "black",
-                        fontWeight: "bold",
-                        fontSize: "1.2rem",
-                      },
-                      "& .MuiFormHelperText-root": {
-                        color: "red",
-                      },
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    required
-                    fullWidth
-                    name="password"
-                    label="Password"
-                    type="password"
-                    id="password"
-                    autoComplete="new-password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    error={!!passwordError}
-                    helperText={passwordError}
-                    InputLabelProps={{ shrink: true }}
-                    sx={{
-                      backgroundColor: "rgba(128, 128, 128, 0.5)",
-                      borderRadius: 1,
-                      "& .MuiInputBase-input": {
-                        fontSize: "1.1rem",
-                        color: "black",
-                      },
-                      "& .MuiFormLabel-root": {
-                        color: "black",
-                        fontWeight: "bold",
-                        fontSize: "1.2rem",
-                      },
-                      "& .MuiFormHelperText-root": {
-                        color: "red",
-                      },
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <FormControlLabel
-                    control={
-                      <Checkbox value="allowExtraEmails" color="primary" />
-                    }
-                    label="I want to receive updates via email."
-                    sx={{
-                      color: "white",
-                      fontWeight: "bold",
-                      fontSize: "1rem",
-                    }}
-                  />
-                </Grid>
-              </Grid>
-              <Button
-                type="submit"
-                fullWidth
-                variant="outlined"
-                color="info"
+              <Box
+                component="form"
+                noValidate
+                onSubmit={handleSubmit}
                 sx={{
-                  mt: 3,
-                  mb: 2,
-                  borderColor: "black",
-                  color: "black",
-                  backgroundColor: "rgba(128, 128, 128, 0.5)", // Gray opaque background
-                  borderRadius: 1,
-                  "&:hover": {
-                    backgroundColor: "rgba(105, 105, 105, 0.7)", // Slightly darker gray on hover
-                    color: "white",
-                  },
+                  backgroundColor: "rgba(255, 255, 255, 0.4)",
+                  borderRadius: 2,
+                  padding: 4,
+                  width: "100%",
+                  justifyContent: "center",
                 }}
               >
-                Sign Up
-              </Button>
-
-              <Grid container justifyContent="flex-end">
-                <Grid item>
-                  <Link
-                    component={RouterLink}
-                    to="/signin"
-                    variant="body2"
-                    sx={{ color: "black" }}
-                  >
-                    Already have an account? Sign in
-                  </Link>
+                {formError && (
+                  <Typography color="error" variant="body2" align="center">
+                    {formError}
+                  </Typography>
+                )}
+                <Grid container spacing={3}>
+                  <Grid item xs={1} sm={6}>
+                    <TextField
+                      autoComplete="given-name"
+                      name="firstName"
+                      required
+                      fullWidth
+                      id="firstName"
+                      label="First Name"
+                      autoFocus
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      InputLabelProps={{ shrink: true }}
+                      sx={{
+                        backgroundColor: "rgba(128, 128, 128, 0.5)",
+                        borderRadius: 1,
+                        "& .MuiInputBase-input": {
+                          fontSize: "1.1rem",
+                          color: "black",
+                        },
+                        "& .MuiFormLabel-root": {
+                          color: "black",
+                          fontWeight: "bold",
+                          fontSize: "1.2rem",
+                        },
+                        "& .MuiFormHelperText-root": {
+                          color: "red",
+                        },
+                      }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      required
+                      fullWidth
+                      id="lastName"
+                      label="Last Name"
+                      name="lastName"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      InputLabelProps={{ shrink: true }}
+                      sx={{
+                        backgroundColor: "rgba(128, 128, 128, 0.5)",
+                        borderRadius: 1,
+                        "& .MuiInputBase-input": {
+                          fontSize: "1.1rem",
+                          color: "black",
+                        },
+                        "& .MuiFormLabel-root": {
+                          color: "black",
+                          fontWeight: "bold",
+                          fontSize: "1.2rem",
+                        },
+                        "& .MuiFormHelperText-root": {
+                          color: "red",
+                        },
+                      }}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      required
+                      fullWidth
+                      id="email"
+                      label="Email Address"
+                      name="email"
+                      autoComplete="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      error={!!emailError}
+                      helperText={emailError}
+                      InputLabelProps={{ shrink: true }}
+                      sx={{
+                        backgroundColor: "rgba(128, 128, 128, 0.5)",
+                        borderRadius: 1,
+                        "& .MuiInputBase-input": {
+                          fontSize: "1.1rem",
+                          color: "black",
+                        },
+                        "& .MuiFormLabel-root": {
+                          color: "black",
+                          fontWeight: "bold",
+                          fontSize: "1.2rem",
+                        },
+                        "& .MuiFormHelperText-root": {
+                          color: "red",
+                        },
+                      }}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      required
+                      fullWidth
+                      name="password"
+                      label="Password"
+                      type="password"
+                      id="password"
+                      autoComplete="new-password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      error={!!passwordError}
+                      helperText={passwordError}
+                      InputLabelProps={{ shrink: true }}
+                      sx={{
+                        backgroundColor: "rgba(128, 128, 128, 0.5)",
+                        borderRadius: 1,
+                        "& .MuiInputBase-input": {
+                          fontSize: "1.1rem",
+                          color: "black",
+                        },
+                        "& .MuiFormLabel-root": {
+                          color: "black",
+                          fontWeight: "bold",
+                          fontSize: "1.2rem",
+                        },
+                        "& .MuiFormHelperText-root": {
+                          color: "red",
+                        },
+                      }}
+                    />
+                  </Grid>
+                  <Grid item xs={12}>
+                    <FormControlLabel
+                      control={
+                        <Checkbox value="allowExtraEmails" color="primary" />
+                      }
+                      label="I want to receive updates via email."
+                      sx={{
+                        color: "white",
+                        fontWeight: "bold",
+                        fontSize: "1rem",
+                      }}
+                    />
+                  </Grid>
                 </Grid>
-              </Grid>
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="outlined"
+                  color="info"
+                  sx={{
+                    mt: 3,
+                    mb: 2,
+                    borderColor: "black",
+                    color: "black",
+                    backgroundColor: "rgba(128, 128, 128, 0.5)",
+                    borderRadius: 1,
+                    "&:hover": {
+                      backgroundColor: "rgba(105, 105, 105, 0.7)",
+                      color: "white",
+                    },
+                  }}
+                >
+                  Sign Up
+                </Button>
+
+                <Grid container justifyContent="flex-end">
+                  <Grid item>
+                    <Link
+                      component={RouterLink}
+                      to="/signin"
+                      variant="body2"
+                      sx={{ color: "black" }}
+                    >
+                      Already have an account? Sign in
+                    </Link>
+                  </Grid>
+                </Grid>
+              </Box>
             </Box>
-          </Box>
-        </Container>
-        <Copyright sx={{ mt: 5, color: "white" }} />
-      </Box>
-    </ThemeProvider>
+          </Container>
+          <Copyright sx={{ mt: 5, color: "white" }} />
+        </Box>
+      </ThemeProvider>
+      <Footer 
+        firstName={firstName}
+        lastName={lastName}
+        email={email}
+      /> {/* Render Footer and pass props */}
+    </>
   );
 }

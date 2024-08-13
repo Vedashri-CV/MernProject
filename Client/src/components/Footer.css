@@ -16,6 +16,20 @@
 .footer-section {
     flex: 1;
     margin: 0 10px;
+   
+    
+}
+.feedback-textarea
+{
+    width: 200px;
+    height: 80px;
+}
+.copyrights
+{
+    font-size: small;
+}
+p{
+    color:#fff
 }
 
 .footer-section h3, .footer-section h4 {
@@ -47,4 +61,12 @@
 
 .social-media li {
     margin: 0 10px;
+}
+.icons
+{
+    transition: transform .2s;
+}
+.icons:hover
+{
+    transform: scale(1.1);
 }
