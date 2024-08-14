@@ -13,7 +13,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useState } from "react";
-
+import axios from "axios";
 
 function Copyright(props) {
   return (
@@ -36,14 +36,16 @@ function Copyright(props) {
 const defaultTheme = createTheme();
 
 export default function SignInSide() {
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
 
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const emailValid = email.includes("@");
     const passwordValid = password.length >= 6;
@@ -51,11 +53,22 @@ export default function SignInSide() {
     setPasswordError(!passwordValid);
 
     if (emailValid && passwordValid) {
-      console.log({
-        email: email,
-        password: password,
-      });
-      navigate("/home"); // Navigate to Home page on successful login
+      try {
+        const response = await axios.post(
+          "http://localhost:3001/api/Recipe-Signin",
+          {
+            firstname,
+            lastname,
+            email,
+            password,
+          }
+        );
+
+        console.log(response.data); 
+        navigate("/"); 
+      } catch (error) {
+        console.error("Error during API call:", error); 
+      }
     }
   };
 
@@ -79,10 +92,7 @@ export default function SignInSide() {
             backgroundImage:
               "url(https://images.pexels.com/photos/3650436/pexels-photo-3650436.jpeg?auto=compress&cs=tinysrgb&w=600)",
             backgroundRepeat: "no-repeat",
-            backgroundSize:"cover",
-          
-        
-         
+            backgroundSize: "cover",
           }}
         />
         <Box
@@ -91,11 +101,11 @@ export default function SignInSide() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            backgroundColor: "rgba(0, 0, 0, 0.6)", // White background with 80% opacity
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
             borderRadius: 2,
             padding: { xs: 2, sm: 4, md: 6 },
             boxShadow: 3,
-            maxWidth: "500px", // Set a max-width for the form to keep it well-proportioned
+            maxWidth: "500px",
             width: "100%",
           }}
         >
@@ -103,7 +113,7 @@ export default function SignInSide() {
             component="h1"
             variant="h5"
             align="center"
-            sx={{ color: "lightgray" }} // Change text color to white
+            sx={{ color: "lightgray" }}
           >
             ENJOY THE BITE
           </Typography>
@@ -111,9 +121,90 @@ export default function SignInSide() {
           <Box
             component="form"
             noValidate
-            onSubmit={handleSubmit}c
+            onSubmit={handleSubmit}
             sx={{ mt: 3 }}
           >
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="firstName"
+              label="First Name"
+              name="firstName"
+              autoComplete="given-name"
+              autoFocus
+              value={firstname}
+              onChange={(e) => setFirstName(e.target.value)}
+              InputLabelProps={{ shrink: true }}
+              sx={{
+                "& .MuiFormLabel-root": {
+                  color: "white",
+                  fontWeight: "bold",
+                  fontSize: "1.3rem",
+                  top: "-10px",
+                },
+                "& .MuiInputBase-input": {
+                  color: "black",
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  borderRadius: "4px",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "transparent",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "gray",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "blue",
+                  },
+                },
+                "& .MuiFormHelperText-root": {
+                  color: "red",
+                },
+              }}
+            />
+
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="lastName"
+              label="Last Name"
+              name="lastName"
+              autoComplete="family-name"
+              value={lastname}
+              onChange={(e) => setLastName(e.target.value)}
+              InputLabelProps={{ shrink: true }}
+              sx={{
+                "& .MuiFormLabel-root": {
+                  color: "white",
+                  fontWeight: "bold",
+                  fontSize: "1.3rem",
+                  top: "-10px",
+                },
+                "& .MuiInputBase-input": {
+                  color: "black",
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  borderRadius: "4px",
+                },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "transparent",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "gray",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "blue",
+                  },
+                },
+                "& .MuiFormHelperText-root": {
+                  color: "red",
+                },
+              }}
+            />
+
             <TextField
               margin="normal"
               required
@@ -122,41 +213,38 @@ export default function SignInSide() {
               label="Email Address"
               name="email"
               autoComplete="email"
-              autoFocus
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               error={emailError}
               helperText={
                 emailError ? "Please enter a valid email address" : ""
               }
-              InputLabelProps={{
-                shrink: true,
-              }}
+              InputLabelProps={{ shrink: true }}
               sx={{
                 "& .MuiFormLabel-root": {
-                  color: "white", 
-                  fontWeight: "bold", 
-                  fontSize: "1.3rem", 
-                  top: "-10px", 
+                  color: "white",
+                  fontWeight: "bold",
+                  fontSize: "1.3rem",
+                  top: "-10px",
                 },
                 "& .MuiInputBase-input": {
-                  color: "black", 
-                  backgroundColor: "rgba(255, 255, 255, 0.8)", 
+                  color: "black",
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
                   borderRadius: "4px",
                 },
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: "transparent", 
+                    borderColor: "transparent",
                   },
                   "&:hover fieldset": {
                     borderColor: "gray",
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "blue", 
+                    borderColor: "blue",
                   },
                 },
                 "& .MuiFormHelperText-root": {
-                  color: "red", 
+                  color: "red",
                 },
               }}
             />
@@ -176,27 +264,25 @@ export default function SignInSide() {
               helperText={
                 passwordError ? "Password must be at least 6 characters" : ""
               }
-              InputLabelProps={{
-                shrink: true, 
-              }}
+              InputLabelProps={{ shrink: true }}
               sx={{
                 "& .MuiFormLabel-root": {
                   color: "white",
-                  fontWeight: "bold", 
-                  fontSize: "1.3rem", 
-                  top: "-10px", 
+                  fontWeight: "bold",
+                  fontSize: "1.3rem",
+                  top: "-10px",
                 },
                 "& .MuiInputBase-input": {
-                  color: "black", 
-                  backgroundColor: "rgba(255, 255, 255, 0.8)", 
-                  borderRadius: "4px", 
+                  color: "black",
+                  backgroundColor: "rgba(255, 255, 255, 0.8)",
+                  borderRadius: "4px",
                 },
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: "transparent", 
+                    borderColor: "transparent",
                   },
                   "&:hover fieldset": {
-                    borderColor: "gray", 
+                    borderColor: "gray",
                   },
                   "&.Mui-focused fieldset": {
                     borderColor: "blue",
@@ -213,12 +299,12 @@ export default function SignInSide() {
               label="Remember me"
               sx={{
                 "& .MuiTypography-root": {
-                  color: "white", // Change label color to white
-                  fontWeight: "bold", // Make the label text bold
-                  fontSize: "1rem", // Increase font size
+                  color: "white",
+                  fontWeight: "bold",
+                  fontSize: "1rem",
                 },
                 "& .MuiCheckbox-root": {
-                  color: "white", // Change checkbox color if needed
+                  color: "white",
                 },
               }}
             />
@@ -231,19 +317,19 @@ export default function SignInSide() {
               sx={{
                 mt: 3,
                 mb: 2,
-                backgroundColor: "rgba(255, 255, 255, 0.6)", // Opaque white background
-                color: "black", // Text color
-                borderColor: "black", // Border color
+                backgroundColor: "rgba(255, 255, 255, 0.6)",
+                color: "black",
+                borderColor: "black",
                 "&:hover": {
-                  backgroundColor: "rgba(0, 0, 0, 0.3)", // Opaque black on hover
-                  borderColor: "black", // Keep boder color on hover
+                  backgroundColor: "rgba(0, 0, 0, 0.3)",
+                  borderColor: "black",
                 },
                 "&:active": {
-                  backgroundColor: "rgba(0, 0, 0, 0.9)", // Darker opaque black on click
+                  backgroundColor: "rgba(0, 0, 0, 0.9)",
                 },
               }}
             >
-              GET YOUR RECIPES
+              Sign Up
             </Button>
 
             <Grid container>
@@ -255,7 +341,7 @@ export default function SignInSide() {
                   sx={{
                     color: "white",
                     "&:hover": {
-                      color: "lightgray", // Change color on hover if needed
+                      color: "lightgray",
                     },
                   }}
                 >
@@ -270,7 +356,7 @@ export default function SignInSide() {
                   sx={{
                     color: "white",
                     "&:hover": {
-                      color: "lightgray", // Change color on hover if needed
+                      color: "lightgray",
                     },
                   }}
                 >
