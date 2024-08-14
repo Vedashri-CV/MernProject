@@ -1,50 +1,122 @@
- * {
-  font-family: "PT Sans", sans-serif;
+/* Global Styles */
+.body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
- }
+    background-color: #f4f4f9;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Animation for page load */
+@keyframes pageFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-load-animation {
+    animation: pageFadeIn 1s ease-out;
+}
+
+/* Hero Section */
 .heroo {
-    background-color:#ff5100;
+    background: linear-gradient(135deg, #ff5100, #f0733e);
     padding: 100px 20px;
     border-radius: 10px;
     text-align: center;
     position: relative;
+    overflow: hidden;
+}
+
+.heroo::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .heroo-content {
     position: relative;
     z-index: 2;
-   
 }
 
 .heroo h1 {
     font-size: 48px;
-    color:#ffffff;       
+    color: #ffffff;
     margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .heroo p {
     font-size: 18px;
     color: #ffffff;
     margin: 10px 0 0 0;
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in-out;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Subscription Plans Section */
 .subscription-plans {
     padding: 4rem 0;
-    text-align:center;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    text-align: center;
+    background: #f3f4f6;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .subscription-plans h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.subscription-plans h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #ff5100, #67db6d);
+    margin: 1rem auto;
+    border-radius: 2px;
 }
 
 .subscription-plans .plans {
-   
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -55,102 +127,95 @@
     background: #fff;
     padding: 2rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 250px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 270px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
 }
 
 .subscription-plans .plan:hover {
     transform: scale(1.05);
-
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .subscription-plans .plan h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
+    color: #ff5100;
+    text-transform: uppercase;
 }
 
 .subscription-plans .plan .price {
-    font-size: 1.5em;
-    background: linear-gradient(to right,#ff5100,#67db6d);
+    font-size: 2em;
+    background: linear-gradient(to right, #ff5100, #67db6d);
     -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      font-size:30px;
-    margin: 10px 0;
+    -webkit-background-clip: text;
+    margin: 15px 0;
 }
 
 .subscription-plans .plan ul {
-    list-style: disc inside;
+    list-style: none;
     padding: 0;
     text-align: left;
-    margin-bottom: 1rem;
-    margin-left: 30px;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
 }
 
 .subscription-plans .plan ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+    font-size: 1rem;
+}
+
+.subscription-plans .plan ul li::before {
     content: '✔';
+    color: #67db6d;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
 }
 
-/* .subscription-plans .plan .cta-btn {
-    background: #051d3d;
-   
-    color: white;
+.button-plan,
+.button-plan1,
+.button-plan2,
+.button-plan3 {
+    background-color: #67db6d;
+    color: #fff;
+    padding: 12px 20px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s;
-} */
-
-
-.button-plan
-{
-    background-color: #67db6d;
-}
-.button-plan1
-{
-    background-color: #67db6d;
-}
-.button-plan2
-{
-    background-color: #67db6d;
-}
-.button-plan3
-{
-    background-color: #67db6d;
-}
-.button-plan:hover
-{
-     transform: scale(1.1);
-     background-color: #67db6d;
-    }
-    .button-plan1:hover
-    {
-    transform: scale(1.1);
-    background-color: #67db6d;
-}
-.button-plan2:hover
-{
-    transform: scale(1.1);
-    background-color: #67db6d;
-}
-.button-plan3:hover
-{
-    transform: scale(1.1);
-    background-color: #67db6d;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.button1{
-     padding-top: 80px;
-     
-    }
-    .button2{
-        
-        padding-top: 80px;
+.button-plan:hover,
+.button-plan1:hover,
+.button-plan2:hover,
+.button-plan3:hover {
+    transform: scale(1.1);
+    background-color: #ff5100;
 }
-.button3{
+
+.button1,
+.button2,
+.button3 {
     padding-top: 30px;
+    text-align: center;
+}
 
+.button1 {
+    padding-top: 80px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .subscription-plans .plan {
+        width: 100%;
+    }
 }

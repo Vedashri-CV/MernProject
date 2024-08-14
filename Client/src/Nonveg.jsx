@@ -23,7 +23,7 @@ const Nonveg = () => {
         navigate('/veg');
     };
     const Click = () => {
-      navigate('/');
+      navigate('/Blog');
   };
   return (
     <>

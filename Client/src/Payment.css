@@ -1,0 +1,279 @@
+
+.payment-method-container {
+    font-family: 'Roboto', sans-serif;
+    max-width: 500px;
+   
+    margin: 20px auto;
+    margin-top: 70px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.payment-method-heading {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.payment-method-input {
+    padding: 12px;
+    width: calc(100% - 120px);
+    margin-right: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-method-input:focus {
+    border-color: #005bb5;
+    box-shadow: 0 0 5px rgba(0, 91, 181, 0.3);
+    outline: none;
+}
+
+.payment-method-button {
+    padding: 12px 24px;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    background-color: #005bb5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-method-button:hover {
+    background-color: #004a9c;
+    transform: scale(1.05);
+}
+
+.payment-method-radio-group {
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method-radio-group:hover {
+    background-color: #f0f0f0;
+}
+
+.payment-method-radio {
+    margin-right: 16px;
+    accent-color: #005bb5;
+    transform: scale(1.2);
+}
+
+.payment-method-label {
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.payment-method-label:hover {
+    color: #005bb5;
+}
+
+.payment-method-logos {
+    margin: 12px 0;
+    display: flex;
+    gap: 12px;
+}
+
+.payment-method-logo img {
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.payment-method-logo img:hover {
+    transform: scale(1.1);
+    filter: none;
+}
+
+.payment-method-select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-method-select:focus {
+    border-color: #005bb5;
+    box-shadow: 0 0 5px rgba(0, 91, 181, 0.3);
+    outline: none;
+}
+
+.upi-group {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.upi-id-container {
+    margin-top: 12px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upi-id-label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.upi-id-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.payment-method-upi-input {
+    padding: 12px;
+    width: calc(100% - 90px);
+    margin-right: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-method-upi-input:focus {
+    border-color: #005bb5;
+    box-shadow: 0 0 5px rgba(0, 91, 181, 0.3);
+    outline: none;
+}
+
+.payment-method-verify-button {
+    padding: 12px 24px;
+    background-color: #f0ad4e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-method-verify-button:hover {
+    background-color: #ec971f;
+    transform: scale(1.05);
+}
+
+.upi-id-hint {
+    font-size: 14px;
+    color: #777;
+    margin-top: 8px;
+}
+
+.payment-method-disabled {
+    color: #777;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.payment-method-disabled input {
+    cursor: not-allowed;
+}
+
+.payment-method-primary-button {
+    padding: 14px;
+    background-color: #ff9900;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-method-primary-button:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+/* Username and Password Section */
+.payment-method-user-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-method-user-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.payment-method-user-info input[type="text"],
+.payment-method-user-info input[type="password"] {
+    padding: 12px;
+    width: calc(100% - 24px);
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-method-user-info input[type="text"]:focus,
+.payment-method-user-info input[type="password"]:focus {
+    border-color: #005bb5;
+    box-shadow: 0 0 5px rgba(0, 91, 181, 0.3);
+    outline: none;
+}
+
+.payment-method-user-info input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.payment-method-user-info button {
+    padding: 12px 24px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-method-user-info button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+.payment-success-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0ffe0;
+    border: 2px solid #00b300;
+    border-radius: 10px;
+    color: #007f00;
+}
+
+.payment-success-message h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.payment-success-message p {
+    margin: 10px 0 0;
+    font-size: 18px;
+}
+

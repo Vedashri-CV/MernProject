@@ -13,7 +13,7 @@ const Navbar = () => {
           <a href="Diet">MyDiet</a>
           <a href="Blog">Blog</a>
         
-          <a href="Sign">SignUp</a>
+          <a href="Sign">SignIn</a>
         </div>
       </nav> 
     </div>

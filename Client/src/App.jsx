@@ -14,6 +14,7 @@ import Plan from "./Plan";
 import Nonveg from "./Nonveg";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Payment from "./Payment";
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <Route path="/" element={<Home/>}></Route>
           <Route path="/Blog" element={<Blog/>}></Route>
           <Route path='/veg' element={<Veg/>}></Route>
-          
+          <Route path="/Payment" element={<Payment/>}></Route>
          <Route path='/Plan' element={<Plan/>}></Route>
          <Route path="/Diet" element={<Diet/>}></Route>
          <Route path="/Sign"  element={<SignInSide/>}></Route>
